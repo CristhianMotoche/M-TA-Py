@@ -2,7 +2,7 @@ import pymongo
 
 def main():
     client = pymongo.MongoClient("localhost", 27017)
-    db = client.test
+    db = client['test']
     print("Connected to: " + db.name)
     print("Collection: " + str(db.my_collection))
     getTweetsByScreenName(db.my_collection, "robynco96635246")
